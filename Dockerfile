@@ -38,7 +38,7 @@ RUN bash -l -c '/home/rubyuser/.rbenv/shims/gem install bundler'
 RUN bash -l -c '/home/rubyuser/.rbenv/shims/bundle install'
 RUN bash -l -c 'source set_env.sh'
 RUN bash -l -c '/home/rubyuser/.rbenv/bin/rbenv rehash'
-RUN bash -l -c '/home/rubyuser/.rbenv/shims/bundle exec rake webpacker:compile'
+# RUN bash -l -c '/home/rubyuser/.rbenv/shims/bundle exec rake webpacker:compile'
 
 
 EXPOSE 3000
