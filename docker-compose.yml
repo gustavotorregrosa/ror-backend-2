@@ -22,13 +22,13 @@ services:
         depends_on:
             - postgres
 
-    # ruby:
-    #     build:
-    #         context: ./
-    #         dockerfile: local.dockerfile
-    #     container_name: ruby
-    #     ports:
-    #         - "3000:3000"
-    #     depends_on:
-    #         - postgres
+    ruby:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        container_name: ruby
+        ports:
+            - "3000:3000"
+        depends_on:
+            - postgres
 

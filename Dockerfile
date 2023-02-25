@@ -32,6 +32,13 @@ RUN bash -l -c 'source ~/.bashrc'
 RUN bash -l -c '~/.rbenv/bin/rbenv install 3.0.2'
 RUN bash -l -c '~/.rbenv/bin/rbenv global 3.0.2'
 
+RUN yarn install
+
+RUN bash -l -c '/home/rubyuser/.rbenv/shims/gem install bundler'
+RUN bash -l -c '/home/rubyuser/.rbenv/shims/bundle install'
+RUN bash -l -c 'source set_env.sh'
+RUN bash -l -c '/home/rubyuser/.rbenv/shims/bundle exec rake webpacker:compile'
+RUN bash -l -c '/home/rubyuser/.rbenv/bin/rbenv rehash'
 
 EXPOSE 3000
 ENTRYPOINT ["rubyscript.sh"]
