@@ -1,0 +1,30 @@
+<div class="row justify-content-center">
+  <form action="/movimentacoes/transferir" method="post" class="col-lg-6">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="form-group">
+      <label for="exampleInputNome">Agência destino</label>
+      <input type="text" class="form-control" name="agencia" id="exampleInputNome" aria-describedby="emailHelp" placeholder="Agência">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="exampleInputNome">Número de conta destino</label>
+      <input type="text" class="form-control" name="numeroconta" id="exampleInputNome" aria-describedby="emailHelp" placeholder="Conta">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="exampleInputNome">Email</label>
+      <input type="email" class="form-control" name="emaildestino" id="exampleInputNome" aria-describedby="emailHelp" placeholder="Email destino">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="exampleInputNome">Valor (R$)</label>
+      <input type="number" class="form-control" name="valor" id="exampleInputNome" aria-describedby="emailHelp" placeholder="Valor">
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-primary">Transferir</button>
+  </form>
+</div>

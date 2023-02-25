@@ -1,0 +1,21 @@
+
+<div class="row justify-content-center">
+  <form action="/conta/login" method="post" class="col-lg-6">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email...">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+
+
+

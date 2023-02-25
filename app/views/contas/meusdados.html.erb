@@ -1,0 +1,24 @@
+<p>Nome: <%= @conta.nome %><p>
+<p>Agência: <%= @conta.agencia %><p>
+<p>Número da conta: <%= @conta.numero_conta %><p>
+<p>Email: <%= @conta.email %><p>
+
+
+<p>Nova senha:</p>
+<div class="row justify-content-left">
+  <form action="/conta/novasenha" method="post" class="col-lg-6">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="form-group">
+      <label for="exampleInputNome">Senha</label>
+      <input type="password" class="form-control" name="senha" id="exampleInputNome" aria-describedby="emailHelp" placeholder="Nova senha">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="exampleInputNome">Confirmação de senha</label>
+      <input type="password" class="form-control" name="confirmacao" id="exampleInputNome" aria-describedby="emailHelp" placeholder="Confirmação">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Trocar senha</button>
+  </form>
+</div>

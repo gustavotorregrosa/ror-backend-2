@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Valor</th>
+      <th scope="col">Operação</th>
+      <th scope="col">Horário</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @itens.each do |item| %>
+        <tr
+            <% if item.operacao == 'retirada' %>
+             style="background-color: rgba(255, 0, 0, 0.2);"
+            <% end %>
+        >
+            <td><%= item.valor%></td>
+            <td><%= item.operacao%></td>
+            <td><%= item.created_at %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+  <form action="/movimentacoes/retirada" method="post" class="col-lg-6">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="form-group">
+      <label for="exampleInputNome">Retirada (R$)</label>
+      <input type="number" class="form-control" name="valor" id="exampleInputNome" aria-describedby="emailHelp" placeholder="Valor retirado">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Retirar</button>
+  </form>
+</div>
+
+
+

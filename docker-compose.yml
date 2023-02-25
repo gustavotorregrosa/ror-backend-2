@@ -1,0 +1,34 @@
+version: '3'
+services:
+
+    postgres:
+        image: postgres
+        container_name: postgres
+        restart: always
+        tty: true
+        environment:
+            POSTGRES_PASSWORD: "gustavo01"
+            POSTGRES_DB: "ror_web_development"
+        ports:
+            - "5432:5432"
+
+    pgadmin:
+        image: dpage/pgadmin4
+        environment:
+            PGADMIN_DEFAULT_EMAIL: "gustavo.torregrosa@gmail.com"
+            PGADMIN_DEFAULT_PASSWORD: "gustavo01"
+        ports:
+            - "16543:80"
+        depends_on:
+            - postgres
+
+    # ruby:
+    #     build:
+    #         context: ./
+    #         dockerfile: local.dockerfile
+    #     container_name: ruby
+    #     ports:
+    #         - "3000:3000"
+    #     depends_on:
+    #         - postgres
+

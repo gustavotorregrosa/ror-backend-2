@@ -1,0 +1,12 @@
+Verificacao de saldo na retirada - OK
+
+Ajustar para R$ (e duas casas decimais na visualizacao) OK
+
+Transferencia
+    nao listar, fazer por agencia e conta 
+    criar agencia e conta ao inves do email
+    Servico de taxas por horario 
+    Fazer a transacao
+
+Testes na ferramenta de testes
+    Testar services
