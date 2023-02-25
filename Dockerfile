@@ -19,6 +19,7 @@ RUN apt-get install -y libpq-dev
 RUN useradd -ms /bin/bash rubyuser
 USER rubyuser
 WORKDIR /home/rubyuser/
+RUN chmod -R 777 /home/rubyuser
 COPY . .
 
 RUN curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
