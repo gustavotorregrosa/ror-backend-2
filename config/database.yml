@@ -17,7 +17,7 @@ development:
   <<: *default
   database: ror_web_development
   username: postgres
-  host: localhost
+  host: postgres
   password: gustavo01
 
 
