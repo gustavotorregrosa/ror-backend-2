@@ -1,2 +1,2 @@
-export host='http://localhost:3000/'
+export host='https://ruby-backend.gustavotorregrosa.link'
 export RAILS_ENV='development'
